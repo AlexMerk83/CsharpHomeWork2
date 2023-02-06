@@ -4,7 +4,7 @@ while (isWork)
 {
     Console.Clear();
     System.Console.WriteLine();
-    System.Console.WriteLine("Homework tasks:");
+    System.Console.WriteLine("Homework tasks: Привет");
     System.Console.WriteLine("1 - Task 10: Second digit");
     System.Console.WriteLine("2 - Task 13: Third digit");
     System.Console.WriteLine("3 - Task 15: Is weekend?");
@@ -26,15 +26,18 @@ while (isWork)
                     {
                         System.Console.Write("Enter 3-digit number: ");
 
-                        if (int.TryParse(Console.ReadLine(), out num) && num.ToString().Length == 3)
-                            corrNum = true;
-                        //else if (num == 0) break;
-                        else System.Console.WriteLine("Input error. Try again or enter 0 for exit.");
+                        string inpStr = Console.ReadLine();
 
-                        System.Console.WriteLine(num);
+                        if (int.TryParse(inpStr, out num) && num.ToString().Length == 3)
+                            corrNum = true;
+                        else if (inpStr.ToLower() == "q")
+                            break;
+                        else
+                            System.Console.WriteLine("Input error. Try again or enter 'q' for exit.");
                     }
                 
-                System.Console.WriteLine("Second digit is " + num.ToString()[1]);
+                if (corrNum)
+                    System.Console.WriteLine("Second digit is " + num.ToString()[1]);
 
                 break;
             }
