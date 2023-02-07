@@ -4,7 +4,7 @@ while (isWork)
 {
     Console.Clear();
     System.Console.WriteLine();
-    System.Console.WriteLine("Homework tasks: Привет");
+    System.Console.WriteLine("Homework tasks:");
     System.Console.WriteLine("1 - Task 10: Second digit");
     System.Console.WriteLine("2 - Task 13: Third digit");
     System.Console.WriteLine("3 - Task 15: Is weekend?");
